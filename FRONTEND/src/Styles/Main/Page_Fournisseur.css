@@ -1,0 +1,409 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* plage de poids */
+  font-stretch: 75% 100%; /* plage de largeur */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+.Page_Fournisseur-root * {
+  margin : 0;
+  padding : 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.Page_Fournisseur-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing : border-box;
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e5e5e5;
+    padding-top: 30px;
+    gap: 30px;
+}
+
+
+/*-------------------------------------------- Partie 'HEADER' ---------------------------------------------------*/
+
+/*partie basse et du milieu de la page*/
+.Page_Fournisseur-root .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+/*titre*/
+.Page_Fournisseur-root .header .header-titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.Page_Fournisseur-root .header .header-titre h1{
+    margin-bottom: 20px;
+}
+
+.Page_Fournisseur-root .header .container-ligne-listepartenaires{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding-bottom: 5px;
+}
+
+.Page_Fournisseur-root .header .container-ligne-listepartenaires .container-listes{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.Page_Fournisseur-root .header .container-ligne-listepartenaires .header-listepartenaires .liste-partenaires,
+.Page_Fournisseur-root .header .container-ligne-listepartenaires .header-listeproduits .liste-produits{
+    padding : 15px 12px 15px 40px;
+    width: 100%;
+    margin-right: 30px;
+    border-radius : 5px;
+    border : none;
+    background-color : #f2f2f2;
+    outline : none;
+    cursor: pointer;
+}
+
+
+.Page_Fournisseur-root .header .container-checkboxmaster-btntelechargertous{
+    width: 90%;
+    display: flex;
+    flex-direction: row; 
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.Page_Fournisseur-root .header .container-checkboxmaster-btntelechargertous .container-checkbox-label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.Page_Fournisseur-root .header .container-checkboxmaster-btntelechargertous .header-telecharger{
+    padding: 10px 35px;
+    cursor: pointer;
+}
+
+.Page_Fournisseur-root .header .container-checkboxmaster-btntelechargertous .container-checkbox-label .checkbox-tout{
+    cursor: pointer;
+}
+
+.Page_Fournisseur-root .header .container-checkboxmaster-btntelechargertous .inactive{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/*-------------------------------------------- Partie 'MAIN' ---------------------------------------------------*/
+
+.Page_Fournisseur-root .main{
+    display:flex;
+    flex-direction: column;
+    width:90%;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits,
+.Page_Fournisseur-root .main .container-libelle-aucunclient{
+    width: 100%;
+    /*padding: 20px 20px 20px 20px;*/
+    background-color: #fff;
+    border-radius: 25px;
+    margin-bottom: 25px;
+}
+
+.Page_Fournisseur-root .main .container-libelle-aucunclient{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 215px);
+}
+
+
+.Page_Fournisseur-root .main .genere{
+    opacity: 0.5;
+}
+
+.Page_Fournisseur-root .main .coche{
+    opacity: 0.8;
+    background-color: #C6E1F2;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .container-infos-client,
+.Page_Fournisseur-root .main .container-item-client-produits .container-infos-produit,
+.Page_Fournisseur-root .main .container-item-client-produits .container-infos-clientproduit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .container-infos-clientproduit{
+    margin-top: 15px;
+}
+
+
+.Page_Fournisseur-root .main .container-item-client-produits .header-infos{
+    margin: 15px 22px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.Page_Fournisseur-root .main .container-item-client-produits .header-infos .checkboxes-telecharger{
+    cursor: pointer;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos,
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-1{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Div contenant les divs des comparateurs (nom de produit et montant)*/
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*Div contenant les comparateurs (nom de produit et montant)*/
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .titre-comparaison,
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .NomProduit-comparaison,
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .Montant-comparaison{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .titre-comparaison h4{
+    padding: 15px 15px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .titre-comparaison .titre-fournisseur{
+    margin-right: 150px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .label-input{
+    width: 22%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    color : #2e5383;
+    font-weight: bold;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-1 .label-input{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    
+}
+
+
+.Page_Fournisseur-root .main .container-item-client-produits .label-input .label-infos{
+    transform: translateY(-7px);
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .input-infos{
+    padding : 15px 12px 15px 15px;
+    width: 100%;
+    border-radius : 5px;
+    border : none;
+    background-color : #f2f2f2;
+    margin-bottom : 10px;
+    outline : none;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .DateOuverture{
+    width: 15%;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .Compte-1erJanvier{
+    width: 22%;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .Compte-31Decembre{
+    width: 22%;
+}
+
+
+.Page_Fournisseur-root .main .container-item-client-produits .container-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap : 30px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .main-infos-comparaison .label-input{
+    margin-left: 0px;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .arrow {
+  width: 100px;
+  height: 4px;
+  background-color: red; /* corps de la flèche */
+  position: relative;
+  transform: translateY(20px);
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits .arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  border-top: 4px solid red;
+  border-right: 4px solid red;
+}
+
+
+.Page_Fournisseur-root .main .container-item-client-produits .container-button .button-create{
+    padding : 10px 35px;
+    cursor: pointer;
+}
+
+.Page_Fournisseur-root .main .container-item-client-produits.genere .container-button .genere{
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Style de l'écran lors d'un chargement nécessiant le spinner*/
+.Page_Fournisseur-root .loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.Page_Fournisseur-root .spinner {
+  width: 50px;
+  height: 50px; /* crée un carré de 50*50 */
+  border: 6px solid #f3f3f3; /*crée une bordure au carré*/
+  border-top: 6px solid #333; /*change la bordure du haut en blanc*/ 
+  border-radius: 50%; /*transforme le carré en cercle*/
+  animation: spin 1s linear infinite; /* crée une animation nommée 'spin' avec une durée de 1 seconde, une vitesse de rotation constante et une répétition à l'inifi */
+}
+
+@keyframes spin { /*utilise l'animation de 'spin'*/
+  to { transform: rotate(360deg); } /*fait tourner l'élément sur lui-même (360°)*/
+}
+
+
+
+
+/* BARRE DE CHARGEMENT */
+.Page_Fournisseur-root .progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Container de la barre */
+.Page_Fournisseur-root .progress-container {
+    width: 40%;
+    max-width: 500px;
+    background-color: #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* La barre de progression elle-même */
+.Page_Fournisseur-root .progress-bar {
+    height: 20px;
+    background-color: #1e88e5;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: width 0.2s ease;
+}

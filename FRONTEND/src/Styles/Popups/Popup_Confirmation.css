@@ -1,0 +1,57 @@
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-overlay .confirmation-popup {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-overlay .confirmation-message {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.confirmation-overlay .confirmation-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirmation-overlay .btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation-overlay .btn-oui {
+  background-color: #28a745;
+  color: white;
+}
+
+.confirmation-overlay .btn-non {
+  background-color: #dc3545;
+  color: white;
+}
+
+
+/* si un nom de Fichier est ajouté dans le onMessage (comme dans l'appel de la popup dans la Page_Fourisseur.jsx */
+.confirmation-overlay .confirmation-popup .span-nom-fichier{
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 12px;
+}

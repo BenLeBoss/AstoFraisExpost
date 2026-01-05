@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Roboto Variable';
+  src: url('/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900; /* plage de poids */
+  font-stretch: 75% 100%; /* plage de largeur */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Variable';
+  src: url('/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Regular';
+  src: url('/fonts/notosans-variablefont_wdthwght-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Italic';
+  src: url('/fonts/notosans-italic-variablefont_wdthwght-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+.PageAuthentification-root * {
+  margin : 0;
+  padding : 0;
+  box-sizing : border-box;
+  font-family : 'Noto Regular', sans-serif;
+}
+
+.PageAuthentification-root {
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  height : 100vh;
+  background : #eeee
+}
+
+/*formulaire de connexion*/
+.PageAuthentification-root .container {
+  position :relative;
+  width : 600px;
+  height : 500px;
+  background : #fff;
+  border-radius : 25px;
+  display : inline-block;
+  padding : 40px 60px;
+  min-width : 300px;
+}
+
+/*titre*/
+.PageAuthentification-root h1{
+  color : #000000;
+  margin-bottom : 30px;
+  text-align : center;
+}
+
+.PageAuthentification-root .container-timeout{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  margin-bottom : 20px;
+}
+
+/*p si temps d'inactivité trop long*/
+.PageAuthentification-root .p-timeout{
+  color:red;
+}
+
+
+.PageAuthentification-root .container .inputs,  .PageAuthentification-root .container .ButtonEvent{
+  display : flex;
+  flex-direction : column
+}
+
+/*champs input text identifiant et mot de passe*/
+.PageAuthentification-root .container .inputs input[type='password'], 
+.PageAuthentification-root .container .inputs input[type='email'],
+.PageAuthentification-root .container .inputs input[type='text']
+{
+  padding : 15px 12px 15px 40px;
+  width: 100%;
+  border-radius : 5px;
+  border : none;
+  background-color : #f2f2f2;
+  margin-bottom : 10px;
+  outline : none;
+}
+
+/*bouton se connecter*/
+.PageAuthentification-root .container .ButtonEvent button{
+  padding : 15px;
+  margin-top : 30px;
+  cursor: pointer;
+}
+
+/*pas de compte*/
+.PageAuthentification-root .container .NoAccount{
+  padding : 5px;
+  text-align: left;
+  float: left;
+}
+
+/*souris qui passe sur le pas de compte*/
+.PageAuthentification-root .container .NoAccount:hover{
+  color: #2c47a1;
+  text-decoration: underline;
+  cursor : pointer
+}
+
+/*mot de passe oublié*/
+.PageAuthentification-root .container .ForgotPw{
+  padding : 5px;
+  text-align:right;
+  float:right;
+}
+
+/*souris qui passe sur le mot de passe oublié*/
+.PageAuthentification-root .container .ForgotPw:hover{
+  color: #2c47a1;
+  text-decoration: underline;
+  cursor : pointer
+}
+
+/*calibre les champs et icones de la page de connexion*/
+.PageAuthentification-root .inputs-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/*règle les icones et leur position par rapport à l'input text*/
+.PageAuthentification-root .inputs-icon .icon {
+  position: absolute;
+  left: 10px; /* distance entre l'icône et le bord du champ */
+  top: 38%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* l'icône ne bloque pas les clics */
+}
+
+/*icones des yeux pour afficher ou non le mot de passe*/
+.PageAuthentification-root .inputs-icon .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.PageAuthentification-root .logoAstoria {
+  width: 50px;
+  height: auto;
+  display : block;
+  margin : 0 auto;
+}
+

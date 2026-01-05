@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* plage de poids */
+  font-stretch: 75% 100%; /* plage de largeur */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+.Page_SelectionFournisseur-root * {
+  margin : 0;
+  padding : 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.Page_SelectionFournisseur-root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing : border-box;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e5e5e5;
+    padding-top: 30px;
+}
+
+
+/*partie basse et du milieu de la page*/
+.Page_SelectionFournisseur-root .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+/*titre*/
+.Page_SelectionFournisseur-root .main .main-titre{
+    padding : 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.Page_SelectionFournisseur-root .main .main-titre h1{
+    margin-bottom: 20px;
+}
+
+
+/*div*/
+.Page_SelectionFournisseur-root .main .container-liste-button{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Page_SelectionFournisseur-root .main .container-liste-button .main-liste{
+  width: 65%;
+}
+
+/*liste fournisseurs*/
+.Page_SelectionFournisseur-root .main .container-liste-button .main-liste .liste-fournisseurs{
+    padding : 15px 12px 15px 40px;
+    width: 100%;
+    margin-right: 30px;
+    border-radius : 5px;
+    border : none;
+    background-color : #f2f2f2;
+    outline : none;
+    cursor: pointer;
+}
+
+.Page_SelectionFournisseur-root .main .container-liste-button .main-liste .liste-fournisseurs option:hover{
+  cursor: pointer;
+}
+
+/*container des boutons*/
+.Page_SelectionFournisseur-root .main .container-liste-button .main-button{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/*boutons de consultation de fiche générées ou non*/
+.Page_SelectionFournisseur-root .main .container-liste-button .main-button .button-consult{ 
+    padding: 14px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+/*Style de l'écran lors d'un chargement nécessiant le spinner*/
+.Page_SelectionFournisseur-root .loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.Page_SelectionFournisseur-root .spinner {
+  width: 50px;
+  height: 50px; /* crée un carré de 50*50 */
+  border: 6px solid #f3f3f3; /*crée une bordure au carré*/
+  border-top: 6px solid #333; /*change la bordure du haut en blanc*/ 
+  border-radius: 50%; /*transforme le carré en cercle*/
+  animation: spin 1s linear infinite; /* crée une animation nommée 'spin' avec une durée de 1 seconde, une vitesse de rotation constante et une répétition à l'inifi */
+}
+
+@keyframes spin { /*utilise l'animation de 'spin'*/
+  to { transform: rotate(360deg); } /*fait tourner l'élément sur lui-même (360°)*/
+}

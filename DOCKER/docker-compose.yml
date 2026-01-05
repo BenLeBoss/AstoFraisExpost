@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: ./Appli_backend_flask
+    container_name: backend-prod
+    expose:
+      - "5000"
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=mysql+pymysql://user:password@<IP_VM1>/FraisExPost
+      - FLASK_APP=run.py
+    restart: always
+
+  frontend:
+    build: ./Appli_frontend_react
+    container_name: frontend-prod
+    expose:
+      - "80"
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    container_name: reverse-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
+      - frontend
+    restart: always
